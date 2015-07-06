@@ -63,7 +63,9 @@
 	<p><?php echo date("H:i:s")?></p>
 	<p><?php echo date("Y-m-d H:i:s l")?></p>
 	<p><?php echo date("Y-m-d_H-i-s_l")?></p>
+	<p>YmdHis:<?php echo date("YmdHis") . rand(100, 999) ?></p>
 	<p><?php echo mktime( 11, 22, 33, 12, 2, 2013 )?></p>
+	<p><?php echo mktime( date( "Y-m-d l" ) )?></p>
 	<?php $date_m = strtotime( "2015-11-01 12:33:24" )?>
 	<p><?php echo date( "Y-m-d H:i:s l", $date_m )?></p>
 	<hr />

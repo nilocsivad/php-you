@@ -38,6 +38,11 @@
 	//echo "<br /><br /><br />";
 	
 	$xpath = new DOMXpath( $doc );
+	$doms = $xpath->query( "//html/body/table/tr/td/p[@class='pg']/strong" );
+	$full_p = $doms[ 0 ]->nodeValue;
+	echo "<p>Count page is " . $full_p . "</p>";
+	
+	/************
 	$trs = $xpath->query( "//html/body/table/tr" );
 	
 	for ( $i = 2, $l = $trs->length - 1; $l > $i; $i++ ) {
@@ -59,50 +64,9 @@
 		echo $ems[ 6 ]->nodeValue;
 		echo "</p>";
 		
-		//echo "<p>" . var_dump( $ems ) . "</p>";
-		
-		
-		
-		
-// 		$val = $trs[ $i ]->nodeValue;
-// 		$arr_all = explode( " ", $val );
-// 		$c = 0;
-// 		$arr_final = array();
-// 		foreach ( $arr_all as $item ) {
-// 			if ( $c > 9 )
-// 				break;
-// 			$item = str_ireplace( " ", "", $item );
-// 			echo "\"" . $item . "\"  -- ";
-// 			if ( $item != "" && str_ireplace( " ", "", $item ) != "" && strlen( $item ) > 0 )
-// 				$arr_final[ $c++ ] = $item;
-// 		}
-// 		echo "<p>" . count( $arr_final ) . "<br />" . implode( "", $arr_final )  . "<br />" . implode( "", $arr_final ) . "</p>";
-		
-
-
-
-		//var_dump( $arr_all );
-		
-// 		$date = trim( substr( $val, 0, 10 ) );
-// 		$val = trim( substr( $val, 10 ) );
-// 		$num = trim( substr( $val, 0, 10 ) );
-// 		$val = trim( substr( $val, 10 ) );
-// 		$codes = trim( substr( $val, 0, 175 ) );
-		
-// 		$arrd = explode( " ", $codes );
-// 		$idx = 0;
-// 		$final_arr = array();
-// 		foreach ( $arrd as $itm ) {
-// 			if ( $itm != "" ) {
-// 				$final_arr[ $idx++ ] = $itm;
-// 			}
-// 		}
-// 		echo "<p>" . $date . " -- " . $num . " -- " . $codes . " -- " . implode( "", $final_arr ) . "</p>";
-		//$arr = explode( " ", $val );
-		//var_dump( $arr );
 		echo "<br /> End of " . $i . "<br /><br />";
 	}
-	
+	************/
 	//echo strip_tags( $txt );
 	//$search = htmlspecialchars( "<body", ENT_COMPAT, "GB2312" );
 	//$search = "<body>";
